@@ -105,8 +105,8 @@ if __name__ == '__main__':
                         help='path to directory to save results (default: "Results/data")')
     parser.add_argument('--gpu', type=str, default='all',
                         help='number of GPU device to use (default: all GPUs)')
-    parser.add_argument('--workers', type=int, default='4',
-                        help='number of data loading workers (default: 4)')
+    parser.add_argument('--workers', type=int, default='32',
+                        help='number of data loading workers (default: 32)')
     parser.add_argument('--no-cuda', action='store_true',
                         help='disables CUDA training')
     parser.add_argument('--seed', type=int, default=-1,

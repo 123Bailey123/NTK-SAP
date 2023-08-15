@@ -43,7 +43,7 @@ def run(args):
         ntksap_epsilon=args.ntksap_epsilon, ntksap_R=args.ntksap_R)
     # sparsity = 10**(-float(args.compression))
 
-    sparsity = 0.8**(float(args.compression))
+    sparsity = 1 / float(args.compression)
     prune_loop(model, loss, pruner, prune_loader, device, sparsity, 
                args.compression_schedule, args.mask_scope, args.prune_epochs, args.reinitialize, args.prune_train_mode, args.shuffle, args.invert)
 
