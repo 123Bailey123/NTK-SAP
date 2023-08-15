@@ -58,8 +58,8 @@ def eval(model, loss, dataloader, device, verbose, gpu=None):
     accuracy1 = 100. * correct1 / len(dataloader.dataset)
     accuracy5 = 100. * correct5 / len(dataloader.dataset)
     # if verbose:
-    print('Evaluation: Average loss: {:.4f}, Top 1 Accuracy: {}/{} ({:.2f}%)'.format(
-            average_loss, correct1, len(dataloader.dataset), accuracy1))
+    print('Evaluation: Average loss: {:.4f}, Top 1 Accuracy: {}/{} ({:.2f}%) Top 5 Accuracy: {}/{} ({:.2f}%)'.format(
+            average_loss, correct1, len(dataloader.dataset), accuracy1, correct5, len(dataloader.dataset), accuracy5))
     return average_loss, accuracy1, accuracy5
 
 def train_eval_loop(model, loss, optimizer, scheduler, train_loader, test_loader, device, epochs, verbose, sampler=None, gpu=None, args=None):
